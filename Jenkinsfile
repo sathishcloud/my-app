@@ -4,7 +4,7 @@ node{
    }
    stage('Compile-Package'){
 
-      def mvnHome =  tool name: 'maven3', type: 'maven11'   
+      def mvnHome =  tool name: 'maven3', type: 'maven;1'   
       sh "${mvnHome}/bin/mvn clean package"
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
